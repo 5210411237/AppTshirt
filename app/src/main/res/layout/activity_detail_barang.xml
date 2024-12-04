@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context=".DetailBarangActivity">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/biru_laut"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Kembali"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/mitr_medium"
+            android:text="Detail Produk"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- ScrollView for Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_layout">
+
+        <LinearLayout
+            android:id="@+id/containerProductDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Product Image -->
+            <ImageView
+                android:id="@+id/imageViewProduk"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:contentDescription="Gambar Produk"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kaos4"
+                android:elevation="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/tvNamaProduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaos Aktor Chicken"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black" />
+
+            <!-- Original Price -->
+            <TextView
+                android:id="@+id/tvHargaAsli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 130.000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp" />
+
+            <!-- Quantity Adjustment -->
+            <LinearLayout
+                android:id="@+id/quantityLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Minus Button -->
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/biru_laut"
+                    android:textColor="@color/black" />
+
+                <!-- Quantity Display -->
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:padding="16dp"
+                    android:textColor="@color/black" />
+
+                <!-- Plus Button -->
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/biru_laut"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Select Size -->
+            <TextView
+                android:id="@+id/tvUkuranLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Ukuran:"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+
+            <Spinner
+                android:id="@+id/spinnerUkuran"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:entries="@array/ukuran_pakaian"/>
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/tvDeskripsiProdukTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Produk"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvDeskripsiProduk"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                android:textSize="16sp"
+                android:textColor="@color/grey" />
+
+            <!-- Add to Cart Button -->
+            <Button
+                android:id="@+id/btnAktifkan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Masukkan Keranjang"
+                android:backgroundTint="@color/biru_laut"
+                android:fontFamily="@font/mitr_medium"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

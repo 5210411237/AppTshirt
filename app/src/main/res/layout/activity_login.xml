@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="26dp">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/rfour"/>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewLogin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@android:color/white"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textselamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang kembali, silakan login"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mitr_regular"
+                android:textSize="14sp"
+
+                android:layout_below="@+id/textLogin"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/textselamat"
+                android:layout_marginTop="25dp"
+                android:hint="Email"
+                android:fontFamily="@font/mitr_medium"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                android:background="@drawable/ed_rounded"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/etPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/etEmailLogin"
+                android:layout_marginTop="25dp"
+                android:hint="Password"
+                android:fontFamily="@font/mitr_medium"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                android:background="@drawable/ed_rounded"
+                android:padding="10dp"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/etPasswordLogin"
+                android:layout_marginTop="30dp"
+                android:text="Login"
+                android:fontFamily="@font/mitr_regular"
+                android:background="@drawable/bt_rounded"
+                android:backgroundTint="@color/biru_laut"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/belum_daftar"
+                android:layout_below="@+id/btnLogin"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belum Punya Akun ?"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/mitr_regular"/>
+                <TextView
+                    android:id="@+id/daftar_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mitr_regular"
+                    android:text=" Daftar!"
+                    android:textColor="@color/biru_laut"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="26dp">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:src="@drawable/rfour" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@android:color/white"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <!-- Judul Daftar -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftar"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <!-- Subjudul -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yuk buat akunmu sebelum belanja"
+                android:textSize="14sp"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="@color/black" />
+
+            <!-- Nama Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama "
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/ed_belakang"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Masukkan nama "
+                android:fontFamily="@font/mitr_regular"
+                android:background="@drawable/ed_rounded"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <!-- Email Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Masukkan email"
+                android:fontFamily="@font/mitr_regular"
+                android:background="@drawable/ed_rounded"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No.Handphone"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/ed_noHp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Masukkan No.Handphone"
+                android:fontFamily="@font/mitr_regular"
+                android:background="@drawable/ed_rounded"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/ed_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Masukkan Alamat"
+                android:fontFamily="@font/mitr_regular"
+                android:background="@drawable/ed_rounded"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <!-- Password Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/ed_password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Masukkan Password"
+                android:fontFamily="@font/mitr_regular"
+                android:background="@drawable/ed_rounded"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Tombol Daftar -->
+            <Button
+                android:id="@+id/bt_daftar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/bt_rounded"
+                android:backgroundTint="@color/biru_laut"
+                android:fontFamily="@font/mitr_medium"
+                android:text="Daftar Sekarang"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- Teks dan Link ke Login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudah punya akun? "
+                    android:fontFamily="@font/mitr_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mitr_regular"
+                    android:text="Login"
+                    android:textColor="@color/biru_laut"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
